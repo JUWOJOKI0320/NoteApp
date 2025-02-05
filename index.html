@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Note/w TodoList</title>
+</head>
+<body>
+    <!--Container for add note, half of viewport-->
+    <div class="addnote-container" id="addnote-container">
+        <div class="addnote">
+            <i class='bx bx-plus' id="add"></i>
+            <!-- <i class='bx bx-checkbox' style='color:#ffffff' ></i> -->
+             <input type="text" class="textbox" id="textbox" placeholder="Add Note"></input>
+             <i class='bx bxs-trash-alt'></i>
+        </div>
+    </div>
+    <!--Container for note, half of viewport-->
+    <div class="note-container" id="note-container">
+    </div>
+    <script src="addnote.js"></script>
+</body>
+</html>

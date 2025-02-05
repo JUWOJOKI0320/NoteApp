@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Genos:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body,html{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(129, 194, 129);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addnote-container{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    align-items:flex-end;
+    margin: 30px 0;
+}
+
+.addnote{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(250px, 30vw,350px);
+    height: clamp(40px, 10vw,60px);
+    border-radius: 20px;
+    background-color: rgba(223, 228, 233, 0.445);
+}
+
+
+.addnote .textbox{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    color: rgb(56, 55, 55);
+}
+
+.textbox::placeholder{
+    color: rgba(231, 234, 238, 0.644);
+}
+
+.textbox:hover::placeholder{
+    color: rgba(255, 255, 255, 0.849);
+}
+
+.addnote:hover  i:nth-child(1){
+    color: white;
+}
+
+.addnote:has(.textbox:focus),.addnote:hover {
+    box-shadow: 0 0 5px rgb(133, 133, 160);
+}
+
+.addnote:has(.textbox:hover) {
+    box-shadow: 0 0 5px rgb(133, 133, 160);
+}
+
+.addnote i{
+    font-size: 30px;
+    padding: 2px;
+    color: rgba(223, 228, 233, 0.671);
+    border-radius: 50px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.addnote i:nth-child(1){
+    margin-left: 10px;
+}
+
+.addnote i:nth-child(3){
+    margin: 0 10px 0 0;
+    font-size: 20px;
+    padding: 8px;
+}
+
+
+.addnote i:hover{
+    background-color: rgba(232, 236, 240, 0.26);
+    color: white;
+    cursor: pointer;
+}
+
+.note-container{
+    display: flex;
+    width:  80vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    height:auto;
+}
+
+.TypeNote{
+    position: absolute;
+    display: flex;
+    width: 1rem;
+    height: 1rem;   
+    background-color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgb(41, 40, 40);
+    transition:.6s ease-in-out;
+    font-size: 1px;
+    opacity:0;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.TypeNote .NoteTitle{
+    position: relative;
+    text-align: center;
+    text-decoration:underline rgb(201, 245, 180);
+    margin: 20px 0 0 0 ;
+    background-color: transparent;
+    border: 0;
+    width: 80%;
+    outline: 0; 
+    font-size: clamp(20px,2vw,30px);
+}
+
+.TypeNote .NoteText{
+    position: relative;
+    font-size: 16px;
+    width:80%;
+    height: 70%;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    resize: none;
+
+}
+
+.SaveButton{
+    position: relative;
+    background-color: rgba(89, 163, 89, 0.589);
+    font-size: clamp(15px, 1vw, 20px);
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: rgb(51, 51, 51);
+    transition: .1s ease-in;
+    margin-bottom: 10px;
+}
+
+.SaveButton:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px black;
+    transform: scale(1.05);
+}
+
+.EditDelete-container{
+    display: flex;
+    flex-direction:row;
+    gap: 30px;
+    margin: 20px 0 10px 0;
+}
+
+#EditButton, #DeleteButton{
+    position: relative;
+    align-self: center;
+    font-size: 22px;
+    color: rgba(89, 163, 89, 0.589);
+}
+
+#EditButton:hover, #DeleteButton:hover{
+    cursor: pointer;
+    color: rgb(68, 66, 66);
+}
+
+@media (max-width: 1000px){
+    .TypeNote .NoteTitle{
+        font-size:14px;
+    }
+
+    .TypeNote .NoteText{
+        font-size: 12px;
+    }
+
+    .SaveButton{
+        font-size: 10px;
+    }
+}
